@@ -1,27 +1,16 @@
 package br.com.dio.desafio.dominio;
 
-public class Curso {
-    private String titulo;
-    private String descricao;
-   private int cargaHoraria;
 
-    public Curso() {
+public class Curso extends Conteudo {
+
+    private int cargaHoraria;
+
+    @Override
+    public double calcularXP() {
+        return XP_PADRAO * cargaHoraria;
     }
 
-    public String getTitulo() {
-        return titulo;
-    }
-
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
-
-    public String getDescricao() {
-        return descricao;
-    }
-
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
+    public Curso(){
     }
 
     public int getCargaHoraria() {
@@ -35,9 +24,23 @@ public class Curso {
     @Override
     public String toString() {
         return "Curso{" +
-                "titulo='" + titulo + '\'' +
-                ", descricao='" + descricao + '\'' +
+                "titulo='" + getTitulo() + '\'' +
+                ", descricao='" + getDescricao() + '\'' +
                 ", cargaHoraria=" + cargaHoraria +
                 '}';
     }
 }
+Footer
+        © 2023 GitHub, Inc.
+        Footer navigation
+        Terms
+        Privacy
+        Security
+        Status
+        Docs
+        Contact GitHub
+        Pricing
+        API
+        Training
+        Blog
+        About
